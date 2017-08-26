@@ -5,6 +5,9 @@ A testing environment including Codeception, Selenium Chrome and WordPress.
 ### Start
 `$ docker-compose up -d`
 
+### Create SQL dump
+`$ docker exec CONTAINER_ID /usr/bin/mysqldump -u root --password=wordpress wordpress > dump.sql`
+
 ### Run Tests
 `$ docker-compose run --rm codecept run`
 

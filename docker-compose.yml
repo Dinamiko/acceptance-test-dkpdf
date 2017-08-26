@@ -1,9 +1,10 @@
 version: '2'
 services:
   codecept:
-      image: codeception/codeception
+      image: vicheus/codeception
       depends_on:
         - chrome
+        - db
       volumes:
         - './tests:/project/tests'
         - './codeception.yml:/project/codeception.yml'
