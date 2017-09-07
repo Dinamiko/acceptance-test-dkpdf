@@ -1,6 +1,6 @@
 <?php
 
-class SettingsPDFSetupCest {
+class PDF_Setup_Cest {
 
 	public function _before( AcceptanceTester $I ) {
 

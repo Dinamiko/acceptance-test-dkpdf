@@ -1,6 +1,6 @@
 <?php
 
-class SettingsPDFButtonCest {
+class PDF_Button_CestCest {
 
     public function _before( AcceptanceTester $I ) {
 

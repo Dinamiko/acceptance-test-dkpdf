@@ -1,6 +1,6 @@
 <?php
 
-class SettingsPDFCSSCest {
+class PDF_CSS_Cest {
 	public function _before( AcceptanceTester $I ) {
 
 		$I->amOnPage('/wp-login.php');

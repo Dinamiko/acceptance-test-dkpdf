@@ -1,6 +1,6 @@
 <?php
 
-class SettingsPDFHeaderFooterCest {
+class PDF_Header_Footer_Cest {
 
 	public function _before( AcceptanceTester $I ) {
 

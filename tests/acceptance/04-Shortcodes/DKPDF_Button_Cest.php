@@ -1,6 +1,6 @@
 <?php
 
-class ShortcodeDKPDFButtonCest {
+class Post_MetaBox_Cest {
 
 	public function _before( AcceptanceTester $I ) {
 
