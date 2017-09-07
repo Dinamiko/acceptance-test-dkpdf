@@ -71,4 +71,26 @@ class PDF_Button_CestCest {
 		$I->dontSeeCheckboxIsChecked('#pdfbutton_align_center');
 		$I->dontSeeCheckboxIsChecked('#pdfbutton_align_right');
 	}
+
+	/**
+	 * Test PDF button in frontend
+	 */
+	public function test_pdf_button_in_frontend( AcceptanceTester $I ) {
+		// check post in types to apply
+		$I->amOnPage( '/wp-admin/admin.php?page=dkpdf_settings' );
+		$I->checkOption('#pdfbutton_post_types_post');
+		$I->click('Save Settings');
+
+		// create a post
+		$I->amOnPage( '/wp-admin/post-new.php' );
+		$I->fillField('#title', 'Test PDF Button in Post');
+		$I->click('#publish');
+
+		// check pdf button in frontend
+		$I->amOnPage( '/' );
+		$I->dontSeeElement('.dkpdf-button-container');
+		$I->see('Test PDF Button in Post');
+		$I->click('Test PDF Button in Post');
+		$I->seeElement('.dkpdf-button-container');
+	}
 }

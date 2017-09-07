@@ -13,9 +13,6 @@ A testing environment including Codeception, Selenium Chrome and WordPress.
 
 `$ docker-compose run --rm codecept run acceptance some-folder/Some_Class_Cest:some_function --steps`
 
-### Stop
-`$ docker-compose down`
-
 ### Mac: use Docker Toolbox instead of Docker for Mac.
 [Docker for Mac](https://docs.docker.com/docker-for-mac/networking/#i-cannot-ping-my-containers) is unable to route traffic to containers, and from containers back to the host. 
 
