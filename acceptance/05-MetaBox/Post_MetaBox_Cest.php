@@ -49,6 +49,7 @@ class DKPDF_Button_Cest {
 		$I->amOnPage( '/wp-admin/edit.php' );
 		$I->click('Post MetaBox');
 		$I->checkOption('#_hide_pdfbutton');
+		$I->executeJS('window.scrollTo(0,0);');
 		$I->click('#publish');
 
 		// go to post frontend, dont see PDF button
