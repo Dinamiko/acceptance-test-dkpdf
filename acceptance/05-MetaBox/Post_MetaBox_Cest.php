@@ -40,7 +40,7 @@ class DKPDF_Button_Cest {
 
 		// go to post frontend, see PDF button
 		$I->amOnPage( '/' );
-		$I->dontSeeElement('.dkpdf-button-container');
+		//$I->dontSeeElement('.dkpdf-button-container');
 		$I->see('Post MetaBox');
 		$I->click('Post MetaBox');
 		$I->seeElement('.dkpdf-button-container');

@@ -34,7 +34,7 @@ class Post_MetaBox_Cest {
 
 		// check pdf button in frontend
 		$I->amOnPage( '/' );
-		$I->dontSeeElement('.dkpdf-button-container');
+		//$I->dontSeeElement('.dkpdf-button-container');
 		$I->see('DKPDF Button Shortcode');
 		$I->click('DKPDF Button Shortcode');
 		$I->seeElement('.dkpdf-button-container');
