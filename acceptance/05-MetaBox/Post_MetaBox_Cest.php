@@ -32,15 +32,14 @@ class DKPDF_Button_Cest {
 
 		// publish post
 		$I->fillField('#title', 'Post MetaBox');
-		$I->executeJS('jQuery("#content").show()');
-		$I->wait(1);
+		$I->click('#content-html');
 		$I->fillField('#content', '[dkpdf-button]');
+		$I->wait(1);
 		$I->executeJS('window.scrollTo(0,0);');
 		$I->click('#publish');
 
 		// go to post frontend, see PDF button
 		$I->amOnPage( '/' );
-		//$I->dontSeeElement('.dkpdf-button-container');
 		$I->see('Post MetaBox');
 		$I->click('Post MetaBox');
 		$I->seeElement('.dkpdf-button-container');
@@ -48,8 +47,10 @@ class DKPDF_Button_Cest {
 		// check disable pdf button
 		$I->amOnPage( '/wp-admin/edit.php' );
 		$I->click('Post MetaBox');
+		$I->wait( 1 );
 		$I->checkOption('#_hide_pdfbutton');
 		$I->executeJS('window.scrollTo(0,0);');
+		$I->wait( 1 );
 		$I->click('#publish');
 
 		// go to post frontend, dont see PDF button

@@ -25,18 +25,17 @@ class Post_MetaBox_Cest {
 
 		// create a post
 		$I->amOnPage( '/wp-admin/post-new.php' );
-		$I->fillField('#title', 'DKPDF Button Shortcode');
-		$I->executeJS('jQuery("#content").show()');
+		$I->fillField( '#title', 'DKPDF Button Shortcode' );
+		$I->click('#content-html');
+		$I->fillField( '#content', '[dkpdf-button]' );
 		$I->wait(1);
-		$I->fillField('#content', '[dkpdf-button]');
-		$I->executeJS('window.scrollTo(0,0);');
-		$I->click('#publish');
+		$I->executeJS( 'window.scrollTo(0,0);' );
+		$I->click( '#publish' );
 
 		// check pdf button in frontend
 		$I->amOnPage( '/' );
-		//$I->dontSeeElement('.dkpdf-button-container');
-		$I->see('DKPDF Button Shortcode');
-		$I->click('DKPDF Button Shortcode');
-		$I->seeElement('.dkpdf-button-container');
+		$I->see( 'DKPDF Button Shortcode' );
+		$I->click( 'DKPDF Button Shortcode' );
+		$I->seeElement( '.dkpdf-button-container' );
 	}
 }
