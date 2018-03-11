@@ -1,6 +1,6 @@
 <?php
 
-class Settings_CestCest {
+class Settings_Cest {
 
 	public function _before( AcceptanceTester $I ) {
 
